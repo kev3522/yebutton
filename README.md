@@ -3,3 +3,9 @@ SHUT UP AND ENJOY THE GREATNESS. Speak to the living legend, Warhol, the number 
 
 # How to use
 Open cmd or terminal and run 'python browser.py' in the corresponding directory. When it spits out a local address, copy and paste that into a browser.
+
+Also make sure to pip-install the following:
+watson_developer_cloud
+wtforms
+flask
+pandas
