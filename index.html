@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <style>
+            body {
+
+                font-family: helvetica;
+                font-size: 3em;
+                letter-spacing: -.1em;
+                color: #ff2929;
+                text-transform: uppercase;
+
+                background-color: #ffe3bd;
+                background-size: cover;
+            }
+
+            #title {
+                font-size: 3.5em;
+                letter-spacing: -.12em; 
+                position: fixed;
+                height: 3.5em;
+            }
+
+            #empty {
+                height: 240px;
+            }
+
+            .button {
+                background-color: #ff2929;
+                height: 20px;
+                width: 20px;
+            }
+
+            input[type=text]:focus {
+                border-color:#ffffff;
+                border: none;
+                border-bottom: 2px #ff2929;
+            }
+
+            input[type=submit] {
+                color: #ffe3bd;
+                font-size: .65em;
+                letter-spacing: -3px;
+                padding:5px 15px; 
+                background:#ff2929; 
+                border: none;
+                cursor:pointer;
+                text-transform: uppercase;
+            }
+
+            input[type=text] {
+                background-color: #ffe3bd;
+                color: #ff2929;
+                font-size: 1em;
+
+                border: none;
+                border-bottom: 2px #ff2929;
+                width: 30%;
+                
+            }
+            
+            #footer {
+               position: fixed;
+               bottom:0;
+               width:100%;
+            }
+            
+            input[type=text]:focus {
+                border: #ffe3bd;
+                
+            }
+        </style>
+        <title>yeButton</title>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href='styles.css'>
+    </head>
+    <strong>
+        <body>
+            <div id = "title">THE YE BUTTON</div>
+            <div id = "empty"></div>
+                <form action="" method="post">
+                    {{ form.csrf }}
+
+                    <strong><div class="inputtext" id = "footer">
+                        {{ form.name.label }} {{ form.name }}
+
+                        <input type="submit" value="YE " />
+                    </div></strong>
+
+                    <div class="messages">
+                        {% for message in messages %}
+                                <!--<span class="msg">{{ message }}</span>-->
+                                <ul>{{ message }}</ul>
+                        {% endfor %}
+
+                    </div>
+
+                </form>
+        </body>
+    </strong>
+</html>
