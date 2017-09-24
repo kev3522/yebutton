@@ -6,6 +6,9 @@ Open cmd or terminal and run 'python browser.py' in the corresponding directory.
 
 Also make sure to pip-install the following:
 watson_developer_cloud
+
 wtforms
+
 flask
+
 pandas
