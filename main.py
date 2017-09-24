@@ -42,7 +42,10 @@ def main(input_msg):
 	categoryname = getCategory(classeslist)
 	print categoryname
 	df = pd.read_csv('categorizedLyrics.csv')
-	responses = df[categoryname].tolist()
+	try:
+		responses = df[categoryname].tolist()
+	except:
+		responses = df[categoryname.split(",")[0]]
 	responses = filternan(responses)
 	output = random.choice(responses)
 	print output

@@ -35,7 +35,7 @@ class Classifier():
 		return classes
 
 	def get_cid(self):
-		return self.get_classifiers()["classifiers"][1]["classifier_id"]
+		return self.get_classifiers()["classifiers"][0]["classifier_id"]
 
 #cid = Classifier().get_cid()
 #print cid
